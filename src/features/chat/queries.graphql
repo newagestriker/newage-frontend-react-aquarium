@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# GraphQL Operations for Chat Feature
+# These will be picked up by graphql-codegen and generate typed documents
+
+mutation SendMessage($message: String!, $userId: String!) {
+  sendMessage(message: $message, userId: $userId)
+}
+
+query GetChatHistory($userId: String!) {
+  getChatHistory(userId: $userId)
+}
+
+query GetThreadHistory($threadId: String!) {
+  getThreadHistory(threadId: $threadId) {
+    role
+    content
+  }
+}
+
+query GetThreads {
+  getThreads
+}
+
+mutation ClearHistory($userId: String!) {
+  clearHistory(userId: $userId)
+}
+
+query GetAIResponse($prompt: String!) {
+  getAIResponse(prompt: $prompt)
+}

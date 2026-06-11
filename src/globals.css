@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #0E1A26;
+  --color-foreground: #F4FBFB;
+  --color-card: #16263A;
+  --color-card-foreground: #F4FBFB;
+  --color-surface: #132233;
+  --color-surface-elevated: #1B2D43;
+  --color-primary: #4ED8DC;
+  --color-primary-foreground: #0E1A26;
+  --color-secondary: #1E3147;
+  --color-muted: #1A2B40;
+  --color-muted-foreground: #9AAEB8;
+  --color-accent: #1FB2A6;
+  --color-accent-foreground: #0E1A26;
+  --color-destructive: #E5524B;
+  --color-border: #4ED8DC26;
+  --color-ring: #4ED8DC;
+  
+  --radius-sm: 12px;
+  --radius-md: 14px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+  
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  
+  --typography-display-font-family: "Inter", sans-serif;
+  --typography-display-font-weight: 800;
+  --typography-display-font-size: 32px;
+  --typography-display-line-height: 1.1;
+  --typography-display-letter-spacing: -0.02em;
+  
+  --typography-title-font-family: "Inter", sans-serif;
+  --typography-title-font-weight: 700;
+  --typography-title-font-size: 16px;
+  --typography-title-line-height: 1.3;
+  
+  --typography-body-font-family: "Inter", sans-serif;
+  --typography-body-font-weight: 400;
+  --typography-body-font-size: 14px;
+  --typography-body-line-height: 1.55;
+  
+  --typography-label-font-family: "JetBrains Mono", monospace;
+  --typography-label-font-weight: 500;
+  --typography-label-font-size: 10px;
+  --typography-label-line-height: 1.2;
+  --typography-label-letter-spacing: 0.12em;
+  --typography-label-text-case: uppercase;
+  
+  --typography-caption-font-family: "Inter", sans-serif;
+  --typography-caption-font-weight: 400;
+  --typography-caption-font-size: 12px;
+  --typography-caption-line-height: 1.4;
+  
+  --shadow-card: 0 8px 24px rgba(0,0,0,0.25);
+  --shadow-glow: 0 0 32px rgba(78,216,220,0.25);
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-card: var(--color-card);
+  --color-card-foreground: var(--color-card-foreground);
+  --color-surface: var(--color-surface);
+  --color-surface-elevated: var(--color-surface-elevated);
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-secondary: var(--color-secondary);
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+  --color-accent: var(--color-accent);
+  --color-accent-foreground: var(--color-accent-foreground);
+  --color-destructive: var(--color-destructive);
+  --color-border: var(--color-border);
+  --color-ring: var(--color-ring);
+  
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+  --radius-full: var(--radius-full);
+  
+  --spacing-1: var(--spacing-1);
+  --spacing-2: var(--spacing-2);
+  --spacing-3: var(--spacing-3);
+  --spacing-4: var(--spacing-4);
+  --spacing-5: var(--spacing-5);
+  --spacing-6: var(--spacing-6);
+  --spacing-8: var(--spacing-8);
+  
+  --typography-display-font-family: var(--typography-display-font-family);
+  --typography-display-font-weight: var(--typography-display-font-weight);
+  --typography-display-font-size: var(--typography-display-font-size);
+  --typography-display-line-height: var(--typography-display-line-height);
+  --typography-display-letter-spacing: var(--typography-display-letter-spacing);
+  
+  --typography-title-font-family: var(--typography-title-font-family);
+  --typography-title-font-weight: var(--typography-title-font-weight);
+  --typography-title-font-size: var(--typography-title-font-size);
+  --typography-title-line-height: var(--typography-title-line-height);
+  
+  --typography-body-font-family: var(--typography-body-font-family);
+  --typography-body-font-weight: var(--typography-body-font-weight);
+  --typography-body-font-size: var(--typography-body-font-size);
+  --typography-body-line-height: var(--typography-body-line-height);
+  
+  --typography-label-font-family: var(--typography-label-font-family);
+  --typography-label-font-weight: var(--typography-label-font-weight);
+  --typography-label-font-size: var(--typography-label-font-size);
+  --typography-label-line-height: var(--typography-label-line-height);
+  --typography-label-letter-spacing: var(--typography-label-letter-spacing);
+  --typography-label-text-case: var(--typography-label-text-case);
+  
+  --typography-caption-font-family: var(--typography-caption-font-family);
+  --typography-caption-font-weight: var(--typography-caption-font-weight);
+  --typography-caption-font-size: var(--typography-caption-font-size);
+  --typography-caption-line-height: var(--typography-caption-line-height);
+  
+  --shadow-card: var(--shadow-card);
+  --shadow-glow: var(--shadow-glow);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0E1A26;
+    --foreground: #F4FBFB;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 0.6s ease-in-out infinite;
+}
