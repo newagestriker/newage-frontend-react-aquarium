@@ -1,4 +1,3 @@
-import React from 'react';
 import { formatTimestamp } from '../../../utils/timestamp';
 
 interface ChatMessageProps {

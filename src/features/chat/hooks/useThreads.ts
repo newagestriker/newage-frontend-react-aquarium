@@ -1,6 +1,6 @@
 import { useQuery, useApolloClient } from '@apollo/client/react';
 import { useState, useEffect, useCallback } from 'react';
-import { ClearHistoryDocument, GetThreadHistoryDocument, GetThreadsDocument } from '../../../graphql/generated';
+import { ClearHistoryDocument, GetThreadHistoryDocument, GetThreadsDocument } from '@/graphql/generated/index'
 
 export const GET_THREADS = GetThreadsDocument;
 export const GET_THREAD_HISTORY = GetThreadHistoryDocument;

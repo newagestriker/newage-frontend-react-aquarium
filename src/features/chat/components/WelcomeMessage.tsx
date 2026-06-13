@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function WelcomeMessage() {
   return (
     <div className="flex flex-col items-center justify-center h-full p-8 text-center">

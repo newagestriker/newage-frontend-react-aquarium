@@ -1,22 +1,19 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import ChatMessage from './ChatMessage';
 import WelcomeMessage from './WelcomeMessage';
 
-interface MainContentProps {
+interface ChatContentProps {
   messages: any[];
   isThinking: boolean;
-  children?: React.ReactNode;
+  className?: string;
 }
 
-export default function MainContent({ messages, isThinking, children }: MainContentProps) {
+export default function ChatContent({ messages, isThinking }: ChatContentProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, isThinking]);
-
   return (
-    <div className="flex-1 overflow-y-auto p-4">
+    <div
+      className='flex-1 overflow-y-auto scrollbar-hide'
+    >
       <div className="max-w-4xl mx-auto">
         {messages.length === 0 ? (
           <WelcomeMessage />
@@ -31,7 +28,6 @@ export default function MainContent({ messages, isThinking, children }: MainCont
             />
           ))
         )}
-        {children}
         {isThinking && <ChatMessage isThinking={true} />}
         <div ref={messagesEndRef} />
       </div>
